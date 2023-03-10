@@ -14,15 +14,15 @@ $(window).on('load',function() {
         let content = res.data[i].content;
         let auther =res.data[i].auther;
         let published_date=res.data[i].published_date;
-        html=`<div class= "container">`
-        html +=`<div> <p> ${id}</p> </div> `
+          
+        const ids = $("<p></p>").text(`${id}`); 
         const titles = $("<p></p>").text(`${title}`); 
         const contents=$("<p></p>").text(`${content}`);
         const authers=$("<p></p>").text(`${auther}`);
         const published_dates=$("<p></p>").text(`${published_date}`)
         
-        $("#container").append( titles,contents,authers,published_dates);  
-        console.log(html);
+        $("#container").append(ids,titles,contents,authers,published_dates);  
+         
       }
     });
   });
