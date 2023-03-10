@@ -45,12 +45,12 @@ $(window).on('load',function() {
         let published_date=res.data[i].published_date;
         html=`<div class= "container">`
         html +=`<div> <p> ${id}</p> </div> `
-        html +=`<div> <p> ${title}</p> </div> `
-        html +=`<div> <p> ${content}</p> </div> `
-        html +=`<div> <p> ${auther}</p> </div> `
-        html +=`<div> <p> ${published_date}</p> </div> `
+        const titles = $("<p></p>").text(`${title}`); 
+        const contents=$("<p></p>").text(`${content}`);
+        const authers=$("<p></p>").text(`${auther}`);
+        const published_dates=$("<p></p>").text(`${published_date}`)
         html+=`</div>`
-        $("#container").append(html);  
+        $("#container").append(html,titles,contents,authers,published_dates);  
         console.log(html);
       }
     });
