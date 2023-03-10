@@ -20,8 +20,8 @@ $(window).on('load',function() {
         const contents=$("<p></p>").text(`${content}`);
         const authers=$("<p></p>").text(`${auther}`);
         const published_dates=$("<p></p>").text(`${published_date}`)
-        html+=`</div>`
-        $("#container").append(html,titles,contents,authers,published_dates);  
+        
+        $("#container").append( titles,contents,authers,published_dates);  
         console.log(html);
       }
     });
