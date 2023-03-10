@@ -30,7 +30,7 @@ let html=''
 // init();
 
 
-$(document).ready(function() {
+$(window).on('load',function() {
     
     axios({
       method:"get",
@@ -55,4 +55,3 @@ $(document).ready(function() {
       }
     });
   });
-  
